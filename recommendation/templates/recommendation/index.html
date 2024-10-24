@@ -1,0 +1,601 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/png">
+  <title>Carepulse</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{%static 'recommendation/bootstrap.css'%}" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- Font Awesome -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles -->
+  <link href="{% static 'recommendation/style.css'%}" rel="stylesheet" />
+  <!-- Responsive styles -->
+  <link href="{% static 'recommendation/responsive.css'%}" rel="stylesheet" />
+
+  <style>
+    .carousel-heading,
+    .carousel-text {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .box {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .img-box img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover .img-box img {
+      transform: scale(1.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .hero_area {
+      margin-bottom: 60px;
+    }
+
+    #chatbotIcon img:hover {
+      transform: scale(1.1);
+    }
+
+    #readMoreBtn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- header section starts -->    
+  <header class="header_section" id="up">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <img src="/images/Heart_logo_-removebg-preview-removebg-preview.png" alt="Carepulse Logo"
+            style="width: 70px; height: 70px;">
+          <span>Carepulse</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">
+                Home <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                About
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                Pages
+              </a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="#appointment" class="dropdown-item">Disease Prediction</a>
+                <a href="precaution.html" class="dropdown-item">Disease Precaution</a>
+                <a href="Medicine.html" class="dropdown-item active">Medicine Recommendation</a>
+                <a href="fitness.html" class="dropdown-item">Diet Plan & Fitness Plan</a>
+                <a href="Appointment.html" class="dropdown-item">Doctor Appointment</a>
+                <a href="AI Chatbot.html" class="dropdown-item">AI Chatbot</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#doctors-section">
+                Doctors
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#in_touch">
+                Contact Us
+              </a>
+            </li>
+            <form class="form-inline">
+              <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header section ends -->
+
+  <div class="hero_area">
+    <div class="hero_bg_box">
+        <img src="{% static 'recommendation/hero-bg.jpg' %}" alt="">
+    </div>
+
+    <section class="slider_section mt-5">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="detail-box">
+                                    <h1 class="carousel-heading">We Provide Best Healthcare</h1>
+                                    <p class="carousel-text">"From Prediction To Prevention We Guide You"</p>
+                                    <div class="btn-box">
+                                        <a href="Login&Signup.html" class="btn1">Sign up</a>
+                                        <a href="Login&Signup.html" class="btn1">Sign In</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="detail-box">
+                                    <h1 class="carousel-heading">Your Health, Our Priority</h1>
+                                    <p class="carousel-text">
+                                        At CarePulse, we combine advanced AI with compassionate care to predict, prevent,
+                                        and manage diseases. From tailored health advice to personalized fitness and diet plans,
+                                        we empower you to take control of your well-being.
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="Login&Signup.html" class="btn1">Sign up</a>
+                                        <a href="Login&Signup.html" class="btn1">Sign In</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="detail-box">
+                                    <h1 class="carousel-heading">Predict, Prevent, Protect</h1>
+                                    <p class="carousel-text">
+                                        With CarePulse's AI-driven health insights, you can predict potential health risks,
+                                        receive personalized precautions, and access medication and fitness plans. Your journey
+                                        to better health starts with informed decisions.
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="Login&Signup.html" class="btn1">Sign up</a>
+                                        <a href="Login&Signup.html" class="btn1">Sign In</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#customCarousel1" data-slide-to="1"></li>
+                <li data-target="#customCarousel1" data-slide-to="2"></li>
+            </ol>
+        </div>
+    </section>
+</div>
+
+  <div class="container">
+    <div class="section-title">
+      <h2 style="font-weight: bold;">Make Disease Prediction</h2>
+      <p>When selecting symptoms for disease prediction, be thorough and specific. Include changes in lifestyle, note existing conditions, and always consult a healthcare professional for proper guidance.</p>
+    </div>
+
+
+      <!-- doctor section -->
+
+  <section class="doctor_section layout_padding" id="doctors-section">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Our Doctors</h2>
+        <p class="col-md-10 mx-auto px-0">
+          CarePulse offers easy doctor consultations, medical history tracking, and highlights Muslim doctors'
+          specializations for streamlined healthcare access.
+        </p>
+      </div>
+  
+      <div class="row">
+        <!-- First 3 Doctors (Visible Initially) -->
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/d1.jpg" alt="Dr. Aisha Khan">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </div>
+              <h5>Dr. Aisha Khan</h5>
+              <h6>General Physician</h6>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/d2.jpg" alt="Dr. Ahmed Malik">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </div>
+              <h5>Dr. Ahmed Malik</h5>
+              <h6>Pediatrician</h6>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/d3.jpg" alt="Dr. Fatima Noor">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </div>
+              <h5>Dr. Fatima Noor</h5>
+              <h6>Cardiologist</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Hidden Doctors (Revealed on 'View All') -->
+      <div class="row" id="hidden-doctors" style="display: none;">
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/d4.jpg" alt="Dr. Hassan Ali">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </div>
+              <h5>Dr. Hassan Ali</h5>
+              <h6>Dermatologist</h6>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/d5.jpg" alt="Dr. Yasmin Siddiqui">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </div>
+              <h5>Dr. Yasmin Siddiqui</h5>
+              <h6>Orthopedic Surgeon</h6>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="images/d6.jpg" alt="Dr. Imran Abbas">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </div>
+              <h5>Dr. Imran Abbas</h5>
+              <h6>Neurologist</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Button to Toggle More Doctors -->
+      <div class="btn-box">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end doctor section -->
+
+
+    <form action="/predict/" method="post" id="diseaseForm">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-4 form-group mt-3">
+          <select name="s1" id="s1" class="form-select" required>
+            <option value="">Select Symptom 1</option>
+            <option value="abdominal_pain">Abdominal Pain</option>
+            <option value="abnormal_menstruation">Abnormal Menstruation</option>
+            <option value="acidity">Acidity</option>
+            <option value="acute_liver_failure">Acute Liver Failure</option>
+            <option value="altered_sensorium">Altered Sensorium</option>
+            <option value="anxiety">Anxiety</option>
+          </select>
+        </div>
+        <div class="col-md-4 form-group mt-3">
+          <select name="s2" id="s2" class="form-select" required>
+            <option value="">Select Symptom 2</option>
+            <option value="abdominal_pain">Abdominal Pain</option>
+            <option value="abnormal_menstruation">Abnormal Menstruation</option>
+            <option value="acidity">Acidity</option>
+            <option value="acute_liver_failure">Acute Liver Failure</option>
+            <option value="altered_sensorium">Altered Sensorium</option>
+            <option value="anxiety">Anxiety</option>
+          </select>
+        </div>
+        <div class="col-md-4 form-group mt-3">
+          <select name="s3" id="s3" class="form-select" required>
+            <option value="">Select Symptom 3</option>
+            <option value="abdominal_pain">Abdominal Pain</option>
+            <option value="abnormal_menstruation">Abnormal Menstruation</option>
+            <option value="acidity">Acidity</option>
+            <option value="acute_liver_failure">Acute Liver Failure</option>
+            <option value="altered_sensorium">Altered Sensorium</option>
+            <option value="anxiety">Anxiety</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 form-group mt-3">
+          <select name="s4" id="s4" class="form-select" required>
+            <option value="">Select Symptom 4</option>
+            <option value="abdominal_pain">Abdominal Pain</option>
+            <option value="abnormal_menstruation">Abnormal Menstruation</option>
+            <option value="acidity">Acidity</option>
+            <option value="acute_liver_failure">Acute Liver Failure</option>
+            <option value="altered_sensorium">Altered Sensorium</option>
+            <option value="anxiety">Anxiety</option>
+          </select>
+        </div>
+        <div class="col-md-4 form-group mt-3">
+          <select name="s5" id="s5" class="form-select" required>
+            <option value="">Select Symptom 5</option>
+            <option value="abdominal_pain">Abdominal Pain</option>
+            <option value="abnormal_menstruation">Abnormal Menstruation</option>
+            <option value="acidity">Acidity</option>
+            <option value="acute_liver_failure">Acute Liver Failure</option>
+            <option value="altered_sensorium">Altered Sensorium</option>
+            <option value="anxiety">Anxiety</option>
+          </select>
+        </div>
+        <div class="col-md-4 form-group mt-3">
+          <select name="s6" id="s6" class="form-select">
+            <option value="">Select Symptom 6 (optional)</option>
+            <option value="abdominal_pain">Abdominal Pain</option>
+            <option value="abnormal_menstruation">Abnormal Menstruation</option>
+            <option value="acidity">Acidity</option>
+            <option value="acute_liver_failure">Acute Liver Failure</option>
+            <option value="altered_sensorium">Altered Sensorium</option>
+            <option value="anxiety">Anxiety</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result mt-5">
+      <h4>Predicted Disease: {{ prediction }}</h4>
+      <h5>Suggested Medication:</h5>
+      <ul>
+        {% for medicine in medicines %}
+        <li>{{ medicine }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div id="chatbotIcon" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer;">
+      <img src="{% static 'chatbot_icon.png' %}" alt="Chatbot Icon" style="width: 60px; height: 60px;">
+    </div>
+
+    <div id="chatbot" style="display: none; position: fixed; bottom: 100px; right: 20px; border: 1px solid #ccc; background: white; width: 300px; max-height: 400px; overflow-y: auto; z-index: 1000;">
+      <div id="chatHeader" style="background: #007bff; color: white; padding: 10px; text-align: center;">
+        Chat with us
+        <span id="closeChat" style="float: right; cursor: pointer;">&times;</span>
+      </div>
+      <div id="chatContent" style="padding: 10px;">
+        <div id="messages"></div>
+        <input type="text" id="chatInput" placeholder="Type a message..." style="width: calc(100% - 22px); padding: 5px;">
+        <button id="sendMessage" style="padding: 5px;">Send</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('chatbotIcon').onclick = function () {
+        document.getElementById('chatbot').style.display = 'block';
+      };
+      document.getElementById('closeChat').onclick = function () {
+        document.getElementById('chatbot').style.display = 'none';
+      };
+      document.getElementById('sendMessage').onclick = function () {
+        var input = document.getElementById('chatInput');
+        var message = input.value;
+        if (message) {
+          var messagesDiv = document.getElementById('messages');
+          messagesDiv.innerHTML += '<div>You: ' + message + '</div>';
+          input.value = '';
+          // Simulate bot response
+          setTimeout(function () {
+            messagesDiv.innerHTML += '<div>Bot: This is a simulated response.</div>';
+          }, 1000);
+        }
+      };
+    </script>
+
+    <div class="disclaimer mt-5">
+      <h5>Disclaimer:</h5>
+      <p>The information provided is not a substitute for professional medical advice. Always consult with a healthcare provider for any medical concerns.</p>
+    </div>
+  </div>
+
+<!-- footer section -->
+<footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_contact">
+            <h4>
+              Reach at..
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_detail">
+            <h4>
+              About
+            </h4>
+            <p>
+              We are dedicated to providing the best healthcare services tailored to your needs. Our mission is to guide
+              you through every step, from disease prediction to prevention, ensuring you receive the most accurate and
+              compassionate care.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto footer_col">
+          <div class="footer_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="footer_links">
+              <a class="active" href="#up">
+                Home
+              </a>
+              <a class="" href="#about-section">
+                About
+              </a>
+              <a class="" href="AI chatbot.html">
+                AI Chatbot
+              </a>
+              <a class="" href="Appointment.html">
+                Appointment
+              </a>
+              <a class="" href="#in_touch">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col ">
+          <h4>
+            Newsletter
+          </h4>
+          <form action="#">
+            <input type="email" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By Waqar Clinic
+        </p>
+
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Custom JS -->
+  <script src="{% static 'script.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<section id="appointment" class="appointment">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="font-weight: bold;">Make Disease Prediction</h2>
+        <p>When selecting symptoms for disease prediction, be thorough and specific about each symptom's nature,
+          duration, and intensity. Include changes in lifestyle, note any existing conditions or medications, and,
+          most importantly, consult a healthcare professional for accurate diagnosis and guidance.</p>
+      </div>
+
+      <form action="#" method="post" role="form" id="diseaseForm">
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <select name="s1" id="s1" class="form-select" required>
+              <option value="">Select Symptom 1</option>
+              <option value="fever">Fever</option>
+              <option value="headache">Headache</option>
+              <option value="nausea">Nausea</option>
+              <option value="fatigue">Fatigue</option>
+              <option value="jointPain">Joint Pain</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="s2" id="s2" class="form-select" required>
+              <option value="">Select Symptom 2</option>
+              <option value="fever">Fever</option>
+              <option value="headache">Headache</option>
+              <option value="nausea">Nausea</option>
+              <option value="fatigue">Fatigue</option>
+              <option value="rash">Skin Rash</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="s3" id="s3" class="form-select" required>
+              <option value="">Select Symptom 3</option>
+              <option value="dengue">Dengue</option>
+              <option value="malaria">Malaria</option>
+              <option value="vomiting">Vomiting</option>
+              <option value="cough">Cough</option>
+              <option value="chills">Chills</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <select name="s4" id="s4" class="form-select" required>
+              <option value="">Select Symptom 4</option>
+              <option value="dengue">Dengue</option>
+              <option value="malaria">Malaria</option>
+              <option value="fatigue">Fatigue</option>
+              <option value="rash">Skin Rash</option>
+              <option value="bodyPain">Body Pain</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="s5" id="s5" class="form-select" required>
+              <option value="">Select Symptom 5</option>
+              <option value="headache">Headache</option>
+              <option value="fever">Fever</option>
+              <option value="jointPain">Joint Pain</option>
+              <option value="weakness">Weakness</option>
+              <option value="soreThroat">Sore Throat</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="s6" id="s6" class="form-select">
+              <option value="">Select Symptom 6</option>
+              <option value="fever">Fever</option>
+              <option value="cough">Cough</option>
+              <option value="nausea">Nausea</option>
+              <option value="bodyPain">Body Pain</option>
+              <option value="fatigue">Fatigue</option>
+            </select>
+          </div>
+        </div>
+        <div class="text-center m-4">
+          <button id="makePredictionBtn" type="button" class="btn1">
+            Make Prediction
+          </button>
+        </div>
+        <div class="form-group mt-3">
+          <div class="result-container">
+            <h2>Predicted Disease: [Disease Name]</h2><br>
+            <h2>Predicted Drugs: [Drug Names]</h2>
+          </div>
+        </div>
+
+        <!-- Disclaimer Section -->
+        <div class="form-group mt-3">
+          <p style="font-size: 14px; color: red; font-style: italic; align-items: center;">
+            *Note: The predictions provided are not a substitute for professional medical advice. Please consult a
+            doctor for proper diagnosis and treatment.
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+        // Function to check if the user is logged in
+        function isUserLoggedIn() {
+            // Assuming you store a user token in localStorage when a user logs in
+            return localStorage.getItem('userToken') !== null;
+        }
+
+        // Add event listener to "Make Prediction" button
+        document.getElementById('makePredictionBtn').addEventListener('click', function(event) {
+            // Prevent form submission or default behavior
+            event.preventDefault();
+
+            // Check if the user is logged in
+            if (!isUserLoggedIn()) {
+                // If the user is not logged in, redirect them to the signup/login page
+                alert("Please login first to make a prediction."); // Optional alert for the user
+                window.location.href = '/Login&Signup.html'; 
+            } else {
+                // User is logged in, allow them to proceed to make a prediction
+                window.location.href = '/make-prediction'; // Update this to your prediction page path
+            }
+        });
+    </script>

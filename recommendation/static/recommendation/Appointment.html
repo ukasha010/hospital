@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Appointment</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!------ Include the above in your HEAD tag ---------->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<style>
+html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body class="bg-light">
+  <!-- Navbar Start -->
+  <header class="header_section" style="padding: 0 0.1rem;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                <img src="/images/Heart_logo_-removebg-preview-removebg-preview.png" alt="Carepulse Logo">
+                <span style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Carepulse</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                            Home <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about-section" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                            style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                            <a href="index.html" class="dropdown-item"
+                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Disease Prediction</a>
+                            <a href="precaution.html" class="dropdown-item" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Disease
+                                Precaution</a>
+                            <a href="medicine.html" class="dropdown-item active"
+                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Medicine Recommendation</a>
+                            <a href="fitness.html" class="dropdown-item"
+                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Diet Plan & Fitness Plan</a>
+                            <a href="#down" class="dropdown-item"
+                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Doctor Appointment</a>
+                            <a href="404.html" class="dropdown-item" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">AI
+                                Chatbot</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#doctors-section" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                            Doctors
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#in_touch" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                            Contact Us
+                        </a>
+                    </li>
+                    <form class="form-inline">
+                        <button class="btn my-2 my-sm-0 nav_search-btn" type="submit"
+                            style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+  <!-- Navbar End -->
+
+
+
+
+  <!-- Bannner -->
+
+  <div class="container banner">
+    <div class="row intro">
+      <div class="col-lg-6 .col-sm-12	.col-md-6	.col-lg-6	.col-xl-6	">
+        <h2 class="animate__animated animate__zoomIn animate__delay-0s">
+          <span>Doctor </span>Appointment </span>
+        </h2>
+        <p>Allows users to view a list of doctors with their specialties and contact details. Users can easily book
+          appointments by clicking the "Book" button on each doctor's profile. The responsive layout ensures a smooth
+          user experience, with interactive card designs and hover effects.</p>
+          <i class="fa-solid fa-play play-btn"></i>
+          <button data-toggle="modal" data-target="#exampleModal" style="border: none; margin-right: 20px;">
+            Watch Video
+          </button>
+          <i class="fa-solid fa-arrow-right arrow-btn"></i>
+          <button data-toggle="modal" data-target="#exampleModal" style="border: none;">
+            Make Appointment
+          </button>
+          
+      </div>
+      <div class="col-lg-6 .col-sm-12	.col-md-6	.col-lg-6	.col-xl-6 image " style="height: 315px;">
+        <img src="images/robot.png" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Appointment Video</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Ztb5S99qSN0?si=HMmLYdleCf2-0k6-"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 450px;"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Meet Our Doctors -->
+
+  <div class="container services">
+    <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Meet our Doctors</h1>
+    <div class="row service">
+      <div class="card col-lg-4 col-sm-12 col-md-6 col-xl-3 team-member" data-aos="fade-right" style="width: 18rem;">
+        <img src="images/team-member-1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Ahmed Khan</h5>
+          <h6>Cardiologist</h6>
+          <p class="card-text">Dr. Ahmed specializes in diagnosing and treating heart conditions with a patient-centered
+            approach.</p>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+              class="fa-brands fa-square-instagram" style="color:rgb(128,125,4);"></i><i class="fa-brands fa-linkedin"
+              style="color: #5d82c0;"></i></a>
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12 col-md-6 col-xl-3 team-member" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/team-member-2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Fatima Ali</h5>
+          <h6>Orthopedic Surgeon</h6>
+          <p class="card-text">Dr. Fatima is known for her expertise in joint and bone surgeries, providing exceptional
+            care to her patients.</p>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+              class="fa-brands fa-square-instagram" style="color:rgb(128,125,4);"></i><i class="fa-brands fa-linkedin"
+              style="color: #5d82c0;"></i></a>
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12 col-md-6 col-xl-3 team-member" data-aos="fade-left" style="width: 18rem;">
+        <img src="images/team-member-3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Omar Farooq</h5>
+          <h6>Pediatrician</h6>
+          <p class="card-text">Dr. Omar provides compassionate care for children, focusing on their overall health and
+            development.</p>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+              class="fa-brands fa-square-instagram" style="color:rgb(128,125,4);"></i><i class="fa-brands fa-linkedin"
+              style="color: #5d82c0;"></i></a>
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12 col-md-6 col-xl-3 team-member" data-aos="fade-right" style="width: 18rem;">
+        <img src="images/team-member-4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Aisha Siddiqui</h5>
+          <h6>Internal Medicine</h6>
+          <p class="card-text">Dr. Aisha excels in managing complex medical conditions with a holistic approach.</p>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+              class="fa-brands fa-square-instagram" style="color:rgb(128,125,4);"></i><i class="fa-brands fa-linkedin"
+              style="color: #5d82c0;"></i></a>
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12 col-md-6 col-xl-3 team-member" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/team-member-5.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Bilal Ahmad</h5>
+          <h6>Neurologist</h6>
+          <p class="card-text">Dr. Bilal is dedicated to diagnosing and treating neurological disorders with advanced
+            techniques.</p>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+              class="fa-brands fa-square-instagram" style="color:rgb(128,125,4);"></i><i class="fa-brands fa-linkedin"
+              style="color: #5d82c0;"></i></a>
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12 col-md-6 col-xl-3 team-member" data-aos="fade-left" style="width: 18rem;">
+        <img src="images/team-member-6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Zainab Khan</h5>
+          <h6>Endocrinologist</h6>
+          <p class="card-text">Dr. Zainab specializes in hormone-related disorders, providing comprehensive care and
+            treatment.</p>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+              class="fa-brands fa-square-instagram" style="color:rgb(128,125,4);"></i><i class="fa-brands fa-linkedin"
+              style="color: #5d82c0;"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Doctor List -->
+
+  <div class="container bg-white pb-4 pt-3 mt-5">
+    <div class="row justify-content-center">
+      <!-- Centering the Heading -->
+      <div class="col-12 text-center mb-4">
+        <h1 class="heading">Today Available Doctors</h1>
+      </div>
+      <!-- Flexbox Container for Doctors' Details -->
+      <div class="col-12 d-flex flex-column">
+        <!-- Header Row -->
+        <div class="d-flex flex-row justify-content-between align-items-center mb-3 header-row">
+          <div class="header-name">Name</div>
+          <div class="header-profession">Profession</div>
+        </div>
+        <!-- Doctor Entries -->
+        <div class="d-flex flex-row justify-content-between align-items-center mb-3 doctor-item">
+          <div class="doctor-name">Dr. Ahmed Khan</div>
+          <div class="doctor-profession">Cardiologist</div>
+        </div>
+        <div class="d-flex flex-row justify-content-between align-items-center mb-3 doctor-item">
+          <div class="doctor-name">Dr. Fatima Ali</div>
+          <div class="doctor-profession">Pediatrician</div>
+        </div>
+        <div class="d-flex flex-row justify-content-between align-items-center mb-3 doctor-item">
+          <div class="doctor-name">Dr. Omar Farooq</div>
+          <div class="doctor-profession">Neurologist</div>
+        </div>
+        <div class="d-flex flex-row justify-content-between align-items-center mb-3 doctor-item">
+          <div class="doctor-name">Dr. Aisha Raza</div>
+          <div class="doctor-profession">Gynecologist</div>
+        </div>
+        <!-- Add more doctors here -->
+      </div>
+    </div>
+  </div>
+  <!-- Appointment Start -->
+  <div class="container-xxl py-5" id="down">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <p class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+          <h1 class="mb-4">Make An Appointment To Visit Our Doctor</h1>
+          <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+            Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet.</p>
+          <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+              style="width: 55px; height: 55px;">
+              <i class="fa fa-phone-alt text-primary"></i>
+            </div>
+            <div class="ms-4">
+              <p class="mb-2">Call Us Now</p>
+              <h5 class="mb-0">+012 345 6789</h5>
+            </div>
+          </div>
+          <div class="bg-light rounded d-flex align-items-center p-5">
+            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+              style="width: 55px; height: 55px;">
+              <i class="fa fa-envelope-open text-primary"></i>
+            </div>
+            <div class="ms-4">
+              <p class="mb-2">Mail Us Now</p>
+              <h5 class="mb-0">info@example.com</h5>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+            <form>
+              <div class="row g-3">
+                <div class="col-12 col-sm-6">
+                  
+                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="email" class="form-control border-0" id="email" placeholder="Your Email" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control border-0" id="phone" placeholder="Your Phone" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <select class="form-select border-0" style="height: 55px;">
+                    <option selected>Choose Doctor</option>
+                    <option value="1">Dr. Ahmed Khan</option>
+                    <option value="2">Dr. Fatima Ali</option>
+                    <option value="3">Dr. Aisha Siddiqui</option>
+                    <option value="4">Dr. Hassan Malik</option>
+                    <option value="5">Dr. Sara Ahmed</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="input-group" id="datepicker">
+                      <input type="text" class="form-control border-0" placeholder="Choose Date" style="height: 55px;" />
+                      <span class="input-group-append">
+                          <span class="input-group-text bg-white border-0">
+                              <i class="fa fa-calendar"></i>
+                          </span>
+                      </span>
+                  </div>
+              </div>
+              
+              <div class="col-12 col-sm-6">
+                  <div class="input-group" id="timepicker">
+                      <input type="text" class="form-control border-0" placeholder="Choose Time" style="height: 55px;" />
+                      <span class="input-group-append">
+                          <span class="input-group-text bg-white border-0">
+                              <i class="fa fa-clock"></i>
+                          </span>
+                      </span>
+                  </div>
+              </div>
+              
+                <div class="col-12">
+                  <textarea class="form-control border-0" rows="5" placeholder="Describe your problem"></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Appointment End -->
+
+
+  <!-- Services We provide -->
+
+  <div class="container services ">
+    <h1 data-aos="zoom-in" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Services we provide </h1>
+    <div class="row service">
+
+      <div class="card col-lg-4 col-sm-12	col-md-6	col-xl-3 service-card" data-aos="zoom-in" style="width: 18rem ;">
+        <img src="images/services-1.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Doctor Monitoring</h5>
+          <p class="card-text">Here, users can track their interactions with doctors. Which keeps a record of their
+            medical history, doctor’s advice, and treatment plans. It helps in keeping all health-related information
+            organized for easy access.</p>
+          <a href="#">learn more <i class="fa fa-solid fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12	col-md-6	col-xl-3 service-card" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/services-2.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Disease Prediction</h5>
+          <p class="card-text"> Allows users to enter their symptoms, and based on the input, the system predicts
+            possible diseases. It uses a model that analyzes the symptoms and offers an estimated diagnosis.</p>
+          <a href="#">learn more <i class="fa fa-solid fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12	col-md-6	col-xl-3 service-card" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/services-3.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Disesase Precaution</h5>
+          <p class="card-text">After predicting potential diseases, It provides users with precautionary measures to
+            prevent the illness from worsening. For example, if the system predicts the flu, it might suggest rest,
+            hydration, and medication.</p>
+          <a href="#">learn more <i class="fa fa-solid fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12	col-md-6	col-xl-3 service-card" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/services-4.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Medicine Recommendation</h5>
+          <p class="card-text">Users manage their medication. It suggests medicines based on the disease prediction and
+            helps set reminders for when to take them. It also tracks prescriptions provided by doctors to ensure users
+            follow their treatment correctly.</p>
+          <a href="#">learn more <i class="fa fa-solid fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12	col-md-6	col-xl-3 service-card" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/services-5.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">AI Chatbot</h5>
+          <p class="card-text">Users can chat with. It answers health-related questions, helps with medication
+            reminders, or provides general wellness tips. The chatbot learns from interactions to improve its responses
+            over time.</p>
+          <a href="#">learn more <i class="fa fa-solid fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12	col-md-6	col-xl-3 service-card" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/services-6.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Diet Plans</h5>
+          <p class="card-text">This module helps users create personalized diet plans. Depending on their health goals
+            (e.g., losing weight, maintaining fitness, or dealing with a specific disease), the system suggests meal
+            plans and calculates the calories they need daily.</p>
+          <a href="#">learn more <i class="fa fa-solid fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+      <div class="card col-lg-4 col-sm-12	col-md-6	col-xl-3 service-card" data-aos="zoom-in" style="width: 18rem;">
+        <img src="images/services-6.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fitness Plan</h5>
+          <p class="card-text">Based on the user's fitness goals, this module recommends exercise routines. Whether the
+            goal is weight loss, muscle building, or general fitness, the system provides a plan including the type of
+            exercises and the duration required.</p>
+          <a href="#">learn more <i class="fa fa-solid fa-arrow-right"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_contact">
+            <h4>
+              Reach at..
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_detail">
+            <h4>
+              About
+            </h4>
+            <p>
+              We are dedicated to providing the best healthcare services tailored to your needs. Our mission is to guide
+              you through every step, from disease prediction to prevention, ensuring you receive the most accurate and
+              compassionate care.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto footer_col">
+          <div class="footer_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="footer_links">
+              <a class="active" href="index.html">
+                Home
+              </a>
+              <a class="" href="index.html#about_section">
+                About
+              </a>
+              <a class="" href="departments.html">
+                AI Chatbot
+              </a>
+              <a class="" href="doctors.html">
+                Appointment
+              </a>
+              <a class="" href="contact.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col ">
+          <h4>
+            Newsletter
+          </h4>
+          <form action="#">
+            <input type="email" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By Waqar Clinic
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+<script src="https://kit.fontawesome.com/de617e3533.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="bootstrap1.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" />
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</html>

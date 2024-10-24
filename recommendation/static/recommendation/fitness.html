@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePulse - Fitness & Diet Plans</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="images/favicon.png" type="">
+    <title> Carepulse </title>
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+</head>
+<style>
+    .carousel-heading {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-text {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+
+    .layout_padding {
+        padding: 90px 0;
+    }
+
+    .layout_padding2 {
+        padding: 75px 0;
+    }
+
+    .layout_padding2-top {
+        padding-top: 75px;
+    }
+
+    .layout_padding2-bottom {
+        padding-bottom: 75px;
+    }
+
+    .layout_padding-top {
+        padding-top: 90px;
+    }
+
+    .layout_padding-bottom {
+        padding-bottom: 90px;
+    }
+
+    .layout_margin-top {
+        margin-top: 90px;
+    }
+
+    .layout_margin-bottom {
+        margin-bottom: 90px;
+    }
+
+    .heading_container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .heading_container h2 {
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
+    form {
+        margin-top: 30px;
+    }
+
+    .heading_container p {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .heading_container.heading_center {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    a,
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+        color: initial;
+    }
+
+    .btn,
+    .btn:focus {
+        outline: none !important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* Align the collapse content and navbar items to the right */
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 20px;
+        /* Space out the nav items */
+    }
+
+    .btn-primary {
+        margin-left: 0px;
+        /* Space out the button from the nav items */
+    }
+
+    @media (min-width: 992px) {
+        .navbar .nav-item .dropdown-menu {
+            display: block;
+            border: none;
+            margin-top: 0;
+            top: 150%;
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+        }
+
+        .navbar .nav-item:hover .dropdown-menu {
+            top: 100%;
+            visibility: visible;
+            transition: .5s;
+            opacity: 1;
+        }
+    }
+
+    /*header section*/
+
+    .hero_area {
+        position: relative;
+        min-height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .hero_area .hero_bg_box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .hero_area .hero_bg_box img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: bottom right;
+        object-position: bottom right;
+    }
+
+    .sub_page .hero_area {
+        min-height: auto;
+        background-color: #0b54a8;
+    }
+
+    .sub_page .hero_area .hero_bg_box {
+        display: none;
+    }
+
+    .header_section {
+        padding: 15px 0;
+
+    }
+
+    .navbar-brand .brand-text {
+        font-weight: bold;
+        font-size: 24px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand .brand-highlight {
+        color: royalblue;
+    }
+
+    .navbar-nav .nav-link {
+        font-weight: bold;
+        color: #333333;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-nav .nav-item.active .nav-link,
+    .navbar-nav .nav-link:hover {
+        color: rgb(3, 52, 201);
+    }
+
+    .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-item {
+        color: #333333;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item.active {
+        background-color: rgba(65, 105, 225, 0.7);
+        color: #ffffff;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .nav_search-btn {
+        background-color: transparent;
+        border: none;
+        color: #333333;
+    }
+
+    .nav_search-btn:hover {
+        color: royalblue;
+    }
+
+    .header_section .container-fluid {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
+        color: white;
+        /* Ensure text is visible over the logo */
+    }
+
+    .navbar-brand img {
+        height: 70px;
+        /* Adjust size as needed */
+        margin-right: 10px;
+        /* Space between logo and text */
+    }
+
+    .navbar-brand span {
+        font-weight: bold;
+        font-size: 24px;
+        color: #0058cc;
+        text-transform: uppercase;
+    }
+
+    .custom_nav-container {
+        padding: 0;
+    }
+
+    .custom_nav-container .navbar-nav {
+        margin-left: auto;
+        color: #0b54a8;
+    }
+
+    .custom_nav-container .navbar-toggler {
+        padding: 0;
+        width: 37px;
+        height: 42px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .custom_nav-container .navbar-nav .nav-item .nav-link {
+        padding: 5px 20px;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .custom_nav-container .nav_search-btn {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: none;
+        color: #ffffff;
+    }
+
+    .custom_nav-container .nav_search-btn:hover {
+        color: #0054d1;
+    }
+
+    .custom_nav-container .navbar-toggler {
+        outline: none;
+    }
+
+    .custom_nav-container .navbar-toggler {
+        padding: 0;
+        width: 37px;
+        height: 42px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .custom_nav-container .navbar-toggler span {
+        display: block;
+        width: 35px;
+        height: 4px;
+        background-color: #ffffff;
+        margin: 7px 0;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        position: relative;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+    .custom_nav-container .navbar-toggler span::before,
+    .custom_nav-container .navbar-toggler span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        top: -10px;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .custom_nav-container .navbar-toggler span::after {
+        top: 10px;
+    }
+
+    .custom_nav-container .navbar-toggler[aria-expanded="true"] {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    .custom_nav-container .navbar-toggler[aria-expanded="true"] span {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .custom_nav-container .navbar-toggler[aria-expanded="true"] span::before,
+    .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    /*end header section*/
+    /* slider section */
+    .slider_section {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+        padding: 45px 0 145px 0;
+    }
+
+    .slider_section .row {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .slider_section #customCarousel1 {
+        width: 100%;
+        position: unset;
+    }
+
+    .slider_section .detail-box {
+        color: #1fab89;
+    }
+
+    .slider_section .detail-box h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .slider_section .detail-box p {
+        color: #fefefe;
+        font-size: 14px;
+    }
+
+    .slider_section .detail-box .btn-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0 -5px;
+        margin-top: 25px;
+    }
+
+    .slider_section .detail-box .btn-box a {
+        margin: 5px;
+        text-align: center;
+        width: 165px;
+    }
+
+    .slider_section .detail-box .btn-box .btn1 {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #ffffff;
+        color: #0368db;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid #ffffff;
+    }
+
+    .slider_section .detail-box .btn-box .btn1:hover {
+        background-color: transparent;
+        color: #ffffff;
+    }
+
+    .slider_section .img-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .slider_section .img-box img {
+        width: 100%;
+        max-width: 375px;
+    }
+
+    .slider_section .carousel-indicators {
+        position: unset;
+        margin: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .slider_section .carousel-indicators li {
+        background-color: #ffffff;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        opacity: 1;
+    }
+
+    .slider_section .carousel-indicators li.active {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Main Content Styles */
+    .container {
+        margin-top: 20px;
+    }
+
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+    .hm-gradient {
+        background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    }
+
+    .darken-grey-text {
+        color: #2E2E2E;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .navbar-nav {
+            text-align: center;
+        }
+    }
+
+    /* Cards Section */
+    .card {
+        border: 1px solid #ddd;
+        /* Optional border for the card */
+        border-radius: 5px;
+        /* Consistent border-radius */
+        overflow: hidden;
+        /* Ensures that content does not overflow the card */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Adds shadow to the card */
+        transition: transform 0.3s ease-in-out;
+        /* Smooth zoom-in effect */
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        /* Zoom-in effect on hover */
+    }
+
+    .card-img-top {
+        height: 200px;
+        /* Adjust the height as needed */
+        object-fit: cover;
+        /* Ensures image covers the card-top area */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            /* Adds margin at the bottom for mobile devices */
+        }
+    }
+
+    /* Ensure consistent section width */
+    .section {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Container adjustments for the BMI section */
+    .container {
+        margin-top: 20px;
+    }
+
+    .row {
+        margin-top: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* footer start */
+
+    .footer_section {
+        background: #084088;
+        color: #ffffff;
+        padding: 60px 0 15px 0;
+        position: relative;
+        margin-top: 60px;
+    }
+
+    .footer_section h4 {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .footer_section .footer_col {
+        margin-bottom: 30px;
+    }
+
+    .footer_section .footer_contact .contact_link_box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .footer_section .footer_contact .contact_link_box a {
+        margin: 5px 0;
+        color: #ffffff;
+    }
+
+    .footer_section .footer_contact .contact_link_box a i {
+        margin-right: 5px;
+    }
+
+    .footer_section .footer_contact .contact_link_box a:hover {
+        color: #99bdec;
+    }
+
+    .footer_section .footer_social {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer_section .footer_social a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #ffffff;
+        border-radius: 100%;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+
+    .footer_section .footer_social a:hover {
+        color: #85a2d8;
+    }
+
+    .footer_section .footer_links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .footer_section .footer_links a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .footer_section .footer_links a:hover {
+        color: #74acf5;
+    }
+
+    .footer_section form input {
+        border: none;
+        background-color: #fefefe;
+        width: 100%;
+        height: 45px;
+        color: #000000;
+        outline: none;
+        border-radius: 5px;
+        padding: 0 15px;
+    }
+
+    .footer_section form input::-webkit-input-placeholder {
+        color: #777;
+    }
+
+    .footer_section form input:-ms-input-placeholder {
+        color: #777;
+    }
+
+    .footer_section form input::-ms-input-placeholder {
+        color: #777;
+    }
+
+    .footer_section form input::placeholder {
+        color: #777;
+    }
+
+    .footer_section form button {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        padding: 10px 55px;
+        background-color: #0051ca;
+        color: #ffffff;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid #0058bd;
+        margin-top: 15px;
+    }
+
+    .footer_section form button:hover {
+        background-color: transparent;
+        color: #014eb3;
+    }
+
+    .footer_section .footer-info {
+        text-align: center;
+    }
+
+    .footer_section .footer-info p {
+        color: #ffffff;
+        padding: 25px 0;
+        margin: 0;
+    }
+
+    .footer_section .footer-info p a {
+        color: inherit;
+    }
+
+    .appointment {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .section-title p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .appointment-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .appointment-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .result-container {
+        height: 150px;
+        width: auto;
+        border: 2px solid blue;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body>
+
+    <div class="hero_area">
+
+        <div class="hero_bg_box">
+            <img src="images/slider3.jpg" alt="">
+        </div>
+
+
+        <!-- header section starts -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/images/Heart_logo_-removebg-preview-removebg-preview.png" alt="Carepulse Logo">
+                        <span>Carepulse</span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html"
+                                    style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold; margin-right: 20px;">
+                                    Home <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#about-section"
+                                    style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold; margin-right: 20px;">
+                                    About
+                                </a>
+                            </li>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                                    style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold; margin-right: 20px;">
+                                    Pages
+                                </a>
+                                <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                                    <a href="index.html" class="dropdown-item" style="font-weight: bold;">Disease
+                                        Prediction</a>
+                                    <a href="precaution.html" class="dropdown-item" style="font-weight: bold;">Disease
+                                        Precaution</a>
+                                    <a href="medicine.html" class="dropdown-item active"
+                                        style="font-weight: bold;">Medicine Recommendation</a>
+                                    <a href="fitness.html" class="dropdown-item" style="font-weight: bold;">Diet Plan &
+                                        Fitness Plan</a>
+                                    <a href="Appointment.html" class="dropdown-item" style="font-weight: bold;">Doctor
+                                        Appointment</a>
+                                    <a href="AI chatbot" class="dropdown-item" style="font-weight: bold;">AI Chatbot</a>
+                                </div>
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#doctors-section"
+                                    style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold; margin-right: 20px;">
+                                    Doctors
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#in_touch"
+                                    style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold; margin-right: 20px;">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <form class="form-inline">
+                                <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- end header section -->
+        <!-- slider section -->
+        <section class="slider_section">
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="detail-box">
+                                        <h1 class="carousel-heading">
+                                            We Provide Best Healthcare
+                                        </h1>
+                                        <p class="carousel-text">
+                                            "From Prediction To Prevention We Guide You"
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="" class="btn1">
+                                                Sign up
+                                            </a>
+                                            <a href="" class="btn1">
+                                                Sign In
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="detail-box">
+                                        <h1 class="carousel-heading">
+                                            We Provide Best Healthcare
+                                        </h1>
+                                        <p class="carousel-text">
+                                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam
+                                            fugiat
+                                            hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias,
+                                            veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="" class="btn1">
+                                                Sign up
+                                            </a>
+                                            <a href="" class="btn1">
+                                                Sign In
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="detail-box">
+                                        <h1 class="carousel-heading">
+                                            We Provide Best Healthcare
+                                        </h1>
+                                        <p class="carousel-text">
+                                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam
+                                            fugiat
+                                            hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias,
+                                            veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="" class="btn1">
+                                                Sign up
+                                            </a>
+                                            <a href="" class="btn1">
+                                                Sign In
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#customCarousel1" data-slide-to="1"></li>
+                    <li data-target="#customCarousel1" data-slide-to="2"></li>
+                </ol>
+            </div>
+        </section>
+    </div>
+    </div>
+    <!-- end slider section -->
+
+    <!-- Cards Section Below Fitness & Diet Plans -->
+    <div class="container mt-5">
+        <h1 class="my-4" style="text-align: center;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">CarePulse - Fitness &
+            Diet Plans</h1>
+        <div class="row">
+            <!-- Card Column 1 -->
+            <div class="col-md-4 mb-4">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="Images/fitness1.jpg" class="card-img-top" alt="Fitness Plan 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Plan 1</h5>
+                        <p class="card-text">Achieve your fitness goals with our expert-designed plan focused on
+                            strength training and cardio exercises.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Column 2 -->
+            <div class="col-md-4 mb-4">
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="Images/fitness2.jpg" class="card-img-top" alt="Fitness Plan 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Plan 2</h5>
+                        <p class="card-text">Follow our personalized fitness plan to build muscle and enhance endurance
+                            with targeted workouts.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Column 3 -->
+            <div class="col-md-4 mb-4">
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="Images/fitness3.jpg" class="card-img-top" alt="Fitness Plan 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Plan 3</h5>
+                        <p class="card-text">Get the most out of your fitness journey with our plan focusing on
+                            flexibility and overall wellness.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Column 4 -->
+            <div class="col-md-4 mb-4">
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="/images/diet1.jpg" class="card-img-top" alt="Diet Plan 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Diet Plan 1</h5>
+                        <p class="card-text">Nourish your body with a balanced diet plan rich in essential nutrients and
+                            healthy eating habits.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Column 5 -->
+            <div class="col-md-4 mb-4">
+                <!-- Card 5 -->
+                <div class="card">
+                    <img src="images/diet2.jpg" class="card-img-top" alt="Diet Plan 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Diet Plan 2</h5>
+                        <p class="card-text">Optimize your health with our customized diet plan designed for weight
+                            management and overall well-being.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Column 6 -->
+            <div class="col-md-4 mb-4">
+                <!-- Card 6 -->
+                <div class="card">
+                    <img src="/images/diet3.jpg" class="card-img-top" alt="Diet Plan 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Diet Plan 3</h5>
+                        <p class="card-text">Enjoy a delicious and nutritious diet plan that supports your fitness goals
+                            and keeps you energized.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <!--News card 1-->
+    <div class="container">
+        <div class="card border-primary mb-4 text-center hoverable">
+            <div class="card-body">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!--Featured image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="/Images/image1.jpeg" class="img-fluid"
+                                alt="Sample image for first version of blog listing">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-7 text-left ml-3 mt-3">
+                        <!--Excerpt-->
+                        <a href="" class="green-text">
+                            <h6 class="font-bold pb-1"><i class="fa fa-desktop"></i> Work</h6>
+                        </a>
+                        <h2 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); align-items: center;">Fitness Plans</h2>
+                        <form id="fitness-form">
+                            <label for="fitness-goal">Select your fitness goal:</label>
+                            <select id="fitness-goal" name="fitness-goal" class="form-control mb-3">
+                                <option value="weight-loss">Weight Loss</option>
+                                <option value="muscle-gain">Muscle Gain</option>
+                                <option value="maintain">Maintain</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Get Fitness Plan</button>
+                        </form>
+                        <div class="recommendation mt-4" id="fitness-recommendation">
+                            <!-- Fitness Plan Recommendations will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--News card 2-->
+        <div class="card border-primary mb-4 text-center hoverable">
+            <div class="card-body">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!--Featured image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="/Images/image2.webp" class="img-fluid"
+                                alt="Sample image for first version of blog listing">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-7 text-left ml-3 mt-3">
+                        <!--Excerpt-->
+                        <a href="" class="green-text">
+                            <h6 class="font-bold pb-1"><i class="fa fa-desktop"></i> Work</h6>
+                        </a>
+                        <h2 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); align-items: center;">Diet Plans</h2>
+                        <form id="diet-form">
+                            <label for="diet-goal">Select your diet goal:</label>
+                            <select id="diet-goal" name="diet-goal" class="form-control mb-3">
+                                <option value="weight-loss">Weight Loss</option>
+                                <option value="muscle-gain">Muscle Gain</option>
+                                <option value="maintain">Maintain</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Get Diet Plan</button>
+                        </form>
+                        <div class="recommendation mt-4" id="diet-recommendation">
+                            <!-- Diet Plan Recommendations will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--News card 3-->
+        <div class="card border-primary mb-4 text-center hoverable">
+            <div class="card-body">
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <!--Featured image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="/Images/image3.jpg" class="img-fluid"
+                                alt="Sample image for first version of blog listing">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-7 text-left ml-3 mt-3">
+                        <!--Excerpt-->
+                        <a href="" class="green-text">
+                            <h6 class="font-bold pb-1"><i class="fa fa-desktop"></i> Work</h6>
+                        </a>
+                        <h2 style="text-align: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Calculate Your BMI
+                        </h2>
+                        <form id="bmi-form">
+                            <div class="form-group">
+                                <label for="weight">Weight (kg):</label>
+                                <input type="number" id="weight" name="weight" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="height">Height (cm):</label>
+                                <input type="number" id="height" name="height" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate BMI</button>
+                        </form>
+                        <div class="mt-4" id="bmi-result">
+                            <!-- BMI result will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 footer_col">
+                    <div class="footer_contact">
+                        <h4>
+                            Reach at..
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    Location
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +01 1234567890
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    demo@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_social">
+                        <a href="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 footer_col">
+                    <div class="footer_detail">
+                        <h4>
+                            About
+                        </h4>
+                        <p>
+                            We are dedicated to providing the best healthcare services tailored to your needs. Our
+                            mission is to guide you through every step, from disease prediction to prevention, ensuring
+                            you receive the most accurate and compassionate care.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 mx-auto footer_col">
+                    <div class="footer_link_box">
+                        <h4>
+                            Links
+                        </h4>
+                        <div class="footer_links">
+                            <a class="active" href="index.html">
+                                Home
+                            </a>
+                            <a class="" href="index.html#about-section">
+                                About
+                            </a>
+                            <a class="" href="AI chatbot.html">
+                                AI Chatbot
+                            </a>
+                            <a class="" href="Appointment.html#down">
+                                Appointment
+                            </a>
+                            <a class="" href="index.html#in_touch">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 footer_col ">
+                    <h4>
+                        Newsletter
+                    </h4>
+                    <form action="#">
+                        <input type="email" placeholder="Enter email" />
+                        <button type="submit">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    &copy; <span id="displayYear"></span> All Rights Reserved By Waqar Clinic
+                </p>
+
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+
+    <!-- owl slider -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/de617e3533.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- owl slider -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <!-- End Google Map -->
+</body>
+
+</html>

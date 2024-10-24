@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- Site Metas -->
+  <link rel="icon"  type="image/png" href="/images/favicon.png">
+  <title> Medicine Recommendation </title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Additional CSS if needed -->
+  <link rel="stylesheet" href="your-custom-styles.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+  /* Align the collapse content and navbar items to the right */
+  .navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 20px;
+    /* Space out the nav items */
+  }
+
+  .btn-primary {
+    margin-left: 20px;
+    /* Space out the button from the nav items */
+  }
+
+  @media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+      display: block;
+      border: none;
+      margin-top: 0;
+      top: 150%;
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+      top: 100%;
+      visibility: visible;
+      transition: .5s;
+      opacity: 1;
+    }
+  }
+  html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body>
+  <!-- Navbar Start -->
+  <header class="header_section" style="padding: 0px 0;" >
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+          <img src="/images/Heart_logo_-removebg-preview-removebg-preview.png" alt="Carepulse Logo">
+          <span>Carepulse</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold;">
+                Home <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about-section"
+                style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold;">
+                About
+              </a>
+            </li>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold;">
+                Pages
+              </a>
+              <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                <a href="index.html" class="dropdown-item" style="font-weight: bold;">Disease Prediction</a>
+                <a href="precaution.html" class="dropdown-item" style="font-weight: bold;">Disease Precaution</a>
+                <a href="medicine.html" class="dropdown-item active" style="font-weight: bold;">Medicine
+                  Recommendation</a>
+                <a href="testimonial.html" class="dropdown-item" style="font-weight: bold;">Diet Plan & Fitness Plan</a>
+                <a href="Appointment.html" class="dropdown-item" style="font-weight: bold;">Doctor Appointment</a>
+                <a href="AI Chatbot.html" class="dropdown-item" style="font-weight: bold;">AI Chatbot</a>
+              </div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#doctors-section"
+                style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold;">
+                Doctors
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#in_touch"
+                style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); font-weight: bold;">
+                Contact Us
+              </a>
+            </li>
+            <form class="form-inline">
+              <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Navbar End -->
+
+  <!-- Jumbotron Section -->
+  <div class="jumbotron">
+    <h1 class="display-4">Your Health, Our Priority!</h1>
+    <p class="lead">Take control of your health with the right medications, recommended just for you.</p>
+    <hr class="my-4">
+    <p>"The greatest wealth is health."</p>
+    <img src="/images/medicine image.jpg" alt="Medicine Image" class="img-fluid">
+    <p class="quote">"Medicine is not only a science; it is also an art."</p>
+  
+    <!-- Learn More Button -->
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="javascript:void(0)" role="button" id="learnMoreBtn" onclick="toggleMedicineInfo()">Learn More</a>
+    </p>
+  
+    <!-- Hidden Section for More Info -->
+    <div id="moreMedicineInfo" style="display: none;">
+      <p>
+        Medicine plays a crucial role in modern healthcare, helping to treat and prevent a wide variety of diseases. Whether it's managing chronic conditions or curing infections, the right medicine can make all the difference.
+      </p>
+      <p>
+        At CarePulse, we provide personalized medication recommendations tailored to your unique health needs. By analyzing your symptoms and medical history, we ensure you receive the best treatment options available.
+      </p>
+    </div>
+  </div>
+  
+  
+  <main class="container">
+    <h1  style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); text-align: center;">Recommended Medicines</h1>
+
+    <div class="card">
+      <h2><i class="material-icons">healing</i> Your Personalized Medicine Plan</h2>
+      <ul class="medicine-list" id="medicine-list">
+        <!-- Medicine list items will be populated here -->
+      </ul>
+    </div>
+
+    <div id="notification"></div>
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      Disclaimer: Please consult your doctor before taking any medicine.
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_contact">
+            <h4>
+              Reach at..
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  waqartahir45@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_detail">
+            <h4>
+              About
+            </h4>
+            <p>
+              We are dedicated to providing the best healthcare services tailored to your needs. Our mission is to guide
+              you through every step, from disease prediction to prevention, ensuring you receive the most accurate and
+              compassionate care.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto footer_col">
+          <div class="footer_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="footer_links">
+              <a class="active" href="index.html">
+                Home
+              </a>
+              <a class="" href="index.html#about-section">
+                About
+              </a>
+              <a class="" href="AI Chatbot.html">
+                AI Chatbot
+              </a>
+              <a class="" href="Appointment.html">
+                Appointment
+              </a>
+              <a class="" href="index.html#in_touch">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col ">
+          <h4>
+            Newsletter
+          </h4>
+          <form action="#">
+            <input type="email" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By Waqar Clinic
+        </p>
+
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMedicineInfo() {
+      var moreInfo = document.getElementById("moreMedicineInfo");
+      var learnMoreBtn = document.getElementById("learnMoreBtn");
+    
+      if (moreInfo.style.display === "none") {
+        moreInfo.style.display = "block";
+        learnMoreBtn.textContent = "Learn Less";
+      } else {
+        moreInfo.style.display = "none";
+        learnMoreBtn.textContent = "Learn More";
+      }
+    }
+    </script>
+    <script src="https://kit.fontawesome.com/de617e3533.js" crossorigin="anonymous"></script>
+</body>
+</html>

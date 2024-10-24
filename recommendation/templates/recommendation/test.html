@@ -1,0 +1,576 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/png">
+  <title>Carepulse</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- Font Awesome -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'style.css'%}" rel="stylesheet" />
+  <!-- Responsive style -->
+  <link href="{% static 'responsive.css'%}" rel="stylesheet" />
+
+  {% comment %} <link rel="stylesheet" type="text/css" href="components/chat.css" /> {% endcomment %}
+
+  <style>
+    .carousel-heading {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-text {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .box {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      /* Zoom in slightly */
+    }
+
+    .img-box img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover .img-box img {
+      transform: scale(1.1);
+      /* Slight zoom-in effect for images */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      padding: 100px 0; 
+    } 
+
+    .hero_area {
+      margin-bottom: 60px;
+    }
+
+    #chatbotIcon img:hover {
+      transform: scale(1.1); /* Zoom effect on hover */
+    }
+
+    #readMoreBtn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="hero_area">
+    <div class="hero_bg_box"> <img src="{% static 'recommendation/hero-bg.jpg' %}" alt=""></div>
+    <div id="header"></div>
+    <div id="slider_section"></div>
+    </div>  
+    <div id="department_section"></div>
+    <div id="about-section"></div>
+    <div id="doctor_section"></div>
+    <div id="contact_section"></div>
+    
+    <div class="container"></div>
+      <div class="section-title">
+        <h2 style="font-weight: bold;">Make Disease Prediction</h2>
+        <p>When selecting symptoms for disease prediction, be thorough and specific about each symptom's nature,
+          duration, and intensity. Include changes in lifestyle, note any existing conditions or medications, and,
+          most importantly, consult a healthcare professional for accurate diagnosis and guidance.</p>
+      </div>
+
+      <form action="/predict" method="post" role="form" id="diseaseForm">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-4 form-group mt-3">
+                <select name="s1" id="s1" class="form-select" required>
+                    <option value="">Select Symptom 1</option>
+                    <option value="abdominal_pain">Abdominal Pain</option>
+                    <option value="abnormal_menstruation">Abnormal Menstruation</option>
+                    <option value="acidity">Acidity</option>
+                    <option value="acute_liver_failure">Acute Liver Failure</option>
+                    <option value="altered_sensorium">Altered Sensorium</option>
+                    <option value="anxiety">Anxiety</option>
+                </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+                <select name="s2" id="s2" class="form-select" required>
+                    <option value="">Select Symptom 2</option>
+                    <option value="abdominal_pain">Abdominal Pain</option>
+                    <option value="abnormal_menstruation">Abnormal Menstruation</option>
+                    <option value="acidity">Acidity</option>
+                    <option value="acute_liver_failure">Acute Liver Failure</option>
+                    <option value="altered_sensorium">Altered Sensorium</option>
+                    <option value="anxiety">Anxiety</option>
+                </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+                <select name="s3" id="s3" class="form-select" required>
+                    <option value="">Select Symptom 3</option>
+                    <option value="abdominal_pain">Abdominal Pain</option>
+                    <option value="abnormal_menstruation">Abnormal Menstruation</option>
+                    <option value="acidity">Acidity</option>
+                    <option value="acute_liver_failure">Acute Liver Failure</option>
+                    <option value="altered_sensorium">Altered Sensorium</option>
+                    <option value="anxiety">Anxiety</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 form-group mt-3">
+                <select name="s4" id="s4" class="form-select" required>
+                    <option value="">Select Symptom 4</option>
+                    <option value="abdominal_pain">Abdominal Pain</option>
+                    <option value="abnormal_menstruation">Abnormal Menstruation</option>
+                    <option value="acidity">Acidity</option>
+                    <option value="acute_liver_failure">Acute Liver Failure</option>
+                    <option value="altered_sensorium">Altered Sensorium</option>
+                    <option value="anxiety">Anxiety</option>
+                </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+                <select name="s5" id="s5" class="form-select" required>
+                    <option value="">Select Symptom 5</option>
+                    <option value="abdominal_pain">Abdominal Pain</option>
+                    <option value="abnormal_menstruation">Abnormal Menstruation</option>
+                    <option value="acidity">Acidity</option>
+                    <option value="acute_liver_failure">Acute Liver Failure</option>
+                    <option value="altered_sensorium">Altered Sensorium</option>
+                    <option value="anxiety">Anxiety</option>
+                </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+                <select name="s6" id="s6" class="form-select">
+                    <option value="">Select Symptom 6</option>
+                    <option value="abdominal_pain">Abdominal Pain</option>
+                    <option value="abnormal_menstruation">Abnormal Menstruation</option>
+                    <option value="acidity">Acidity</option>
+                    <option value="acute_liver_failure">Acute Liver Failure</option>
+                    <option value="altered_sensorium">Altered Sensorium</option>
+                    <option value="anxiety">Anxiety</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="text-center m-4">
+            <button id="makePredictionBtn" type="submit" class="btn btn-danger btn-lg">
+                Make Prediction
+            </button>
+        </div>
+    
+        <div class="form-group mt-3">
+            <div class="result-container">
+                {% if predicted_disease %}
+                <h2>Predicted Disease: <span id="predictedDisease">{{predicted_disease}}</span></h2><br>
+                {% endif %}
+                {% if medications %}
+                <h2>Predicted Drugs: <span id="predictedDrugs">{{medications}}</span></h2>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+    
+        <!-- Disclaimer Section -->
+        <div class="form-group mt-3">
+          <p style="font-size: 14px; color: red; font-style: italic; align-items: center;">
+            *Note: The predictions provided are not a substitute for professional medical advice. Please consult a
+            doctor for proper diagnosis and treatment.
+          </p>
+        </div>
+      </form>
+    </div>    
+
+    <div id="footer"></div>
+    
+    <div id="chatbotIcon">
+      <img src="{% static 'recommendation/ss-removebg-preview.png' %}" alt="Chatbot" 
+        style="position: fixed; bottom: 50px; left: 70px; width: 70px; height: 70px; border-radius: 50%; object-fit: cover; cursor: pointer; transition: transform 0.3s ease; border: none; background: transparent; padding: 0; margin: 0;" 
+        onclick="openChatbot()"/>
+    </div>
+
+    <div id="chatbot" style="display: none; flex-direction: column; position: fixed; bottom: 50px; left: 160px; width: 300px; height: 400px; background-color: white; border-radius: 10px; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);">
+      <div class="chatbox">
+          <div class="chatbox__support">
+              <div class="chatbox__header">
+                  Chat support!
+              </div>
+              <div class="chatbox__messages" id="chatboxMessages">
+                  <!-- Initial bot message -->
+                  <div class="messages__item messages__item--operator">
+                      How can I help?
+                  </div>
+              </div>
+              <div class="chatbox__footer">
+                  <input type="text" id="userMessage" placeholder="Write a message">
+                  <button onclick="sendMessage()">Send</button>
+              </div>            
+          </div>  
+      </div>  
+  </div>
+  
+  
+  <style>
+  /* CHATBOX */
+  /* Style for the button */
+.btn1 {
+  width: 100%; 
+  max-width: 300px;
+  background-color: #007bff; 
+  color: white; 
+  padding: 12px 20px; 
+  font-size: 16px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.btn1:hover {
+  background-color: #0056b3; 
+}
+
+  #chatbot {
+      display: none; 
+      flex-direction: column;
+      position: fixed;
+      bottom: 50px;
+      left: 160px;
+      width: 300px;
+      height: 400px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main chatbox container */
+  .chatbox {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+  }
+  
+  /* Chatbox content when closed */
+  .chatbox__support {
+      display: flex;
+      flex-direction: column;
+      background: #eee;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button alignment */
+  .chatbox__button {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+  }
+  
+  /* Button style */
+  .chatbox__button button {
+      padding: 10px 20px;
+      background-color: rgb(45, 176, 220);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  .chatbox__button button:hover {
+      background-color: rgb(37, 155, 194);
+  }
+  
+  /* Header */
+  .chatbox__header {
+      position: sticky;
+      top: 0;
+      background:  rgb(45, 176, 220);
+      padding: 10px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+  }
+  
+  /* Messages area */
+  .chatbox__messages {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      flex-grow: 1;
+      padding: 10px;
+  }
+  
+  /* Individual message styles */
+  .messages__item {
+      background: rgb(45, 176, 220);
+      max-width: 60%;
+      width: fit-content;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      color: white;
+      font-size: 14px;
+  }
+  
+  /* Operator (chatbot) message */
+  .messages__item--operator {
+    margin-right: auto;
+    background:  rgb(45, 176, 220);
+  }
+  
+  /* Visitor (user) message */
+  .messages__item--visitor {
+    margin-left: auto;
+    background: #007bff; 
+  }
+  
+  /* Typing animation */
+  .messages__item--typing {
+      display: flex;
+      gap: 5px;
+  }
+  
+  .messages__dot {
+      width: 5px;
+      height: 5px;
+      background-color: #ccc;
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+  }
+  
+  @keyframes blink {
+      0% {
+          opacity: 0;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+  
+  /* Footer (input area) */
+  .chatbox__footer {
+      display: flex;
+      padding: 10px;
+      background-color: #fff;
+      border-top: 2px solid #ccc;
+  }
+  
+  /* Input field */
+  .chatbox__footer input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      margin-right: 10px;
+  }
+
+  /* Footer (input area with send button) */
+.chatbox__footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Input field */
+.chatbox__footer input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px; 
+}
+
+/* Send button */
+.chatbox__footer button {
+    padding: 8px 15px;
+    background-color:rgb(8, 164, 216); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbox__footer button:hover {
+    background-color: rgb(17, 126, 162);
+}
+
+  </style>
+  
+
+    <script>
+      function sendMessage() {
+    const userMessageInput = document.getElementById("userMessage");
+    const userMessage = userMessageInput.value.trim(); // Get the message from the input
+    
+    if (userMessage !== "") {
+        // Create a new div for the user's message
+        const userMessageDiv = document.createElement("div");
+        userMessageDiv.classList.add("messages__item", "messages__item--visitor");
+        userMessageDiv.textContent = userMessage;
+        
+        // Append the user's message to the chatbox
+        const chatboxMessages = document.getElementById("chatboxMessages");
+        chatboxMessages.appendChild(userMessageDiv);
+        
+        // Clear the input field after sending
+        userMessageInput.value = "";
+
+        // Scroll to the bottom of the chatbox
+        chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+
+        // Simulate bot response after a short delay
+        setTimeout(() => {
+            const botResponseDiv = document.createElement("div");
+            botResponseDiv.classList.add("messages__item", "messages__item--operator");
+            botResponseDiv.textContent = "Thank you for your message! How can I assist you further?";
+            chatboxMessages.appendChild(botResponseDiv);
+            
+            // Scroll to the bottom again for bot response
+            chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
+        }, 1000); // Simulate delay of 1 second for bot response
+    }
+}
+      async function openChatbot() {
+        const chatbotElement = document.getElementById('chatbot');
+        console.log('Chatbot Element:', chatbotElement); // Check if it's null
+        
+    // Check if the chatbot is already open
+    if (chatbotElement.innerHTML === "") {
+        try {
+            // Fetch the chatbot HTML content from an external file
+            const chatbotResponse = await fetch('static/recommendation/chatbot.html');
+            console.log("Chatbot Opened");
+            if (!chatbotResponse.ok) {
+                throw new Error('Failed to load chatbot content');
+            }
+
+            // Insert fetched content into the chatbot container
+            chatbotElement.innerHTML = await chatbotResponse.text();
+        } catch (error) {
+            console.error('Error loading chatbot:', error);
+        }
+    }
+    // Toggle visibility of the chatbot
+    chatbotElement.style.display = (chatbotElement.style.display === 'none' || chatbotElement.style.display === '') ? 'flex' : 'none';
+}
+      async function loadSections() {
+      try {
+        const headerResponse = await fetch('/static/recommendation/header.html');
+        const sliderResponse = await fetch('/static/recommendation/slider.html');
+        const departmentResponse = await fetch('/static/recommendation/department.html');
+        const aboutResponse = await fetch('/static/recommendation/about.html');
+        const doctorResponse = await fetch('/static/recommendation/doctors.html');
+        const contactResponse = await fetch('/static/recommendation/contact.html');
+        const footerResponse = await fetch('/static/recommendation/footer.html');
+        
+          
+          document.getElementById('header').innerHTML = await headerResponse.text();
+          document.getElementById('slider_section').innerHTML = await sliderResponse.text();
+          document.getElementById('department_section').innerHTML = await departmentResponse.text();
+          document.getElementById('about-section').innerHTML = await aboutResponse.text();
+          document.getElementById('doctor_section').innerHTML = await doctorResponse.text();
+          document.getElementById('contact_section').innerHTML = await contactResponse.text();
+          document.getElementById('footer').innerHTML = await footerResponse.text();
+          } catch (error) {
+          console.error('Error loading sections:', error);
+      }
+  }
+{% comment %} 
+      function isUserLoggedIn() {
+            return localStorage.getItem('userToken') !== null;
+        } {% endcomment %}
+
+
+      loadSections();
+
+      // Event listener for form submission
+document.getElementById('diseaseForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Check if the user is logged in
+    if (0) { //!isUserLoggedIn()
+        alert("Please login first to make a prediction."); 
+        window.location.href = 'Login&Signup.html'; 
+    } else {
+        // Get form data
+        const formData = new FormData(this);
+
+        // Make the prediction request
+        fetch('/predict/', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}', // Add CSRF token if using Django
+            },
+        })
+        .then(response => response.json()) // Expect JSON response
+        .then(data => {
+            // Update the predicted disease and drugs in the UI
+            document.getElementById('predictedDisease').textContent = data.disease || 'No prediction available';
+            document.getElementById('predictedDrugs').textContent = data.drugs || 'No drugs available';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while making the prediction.');
+        });
+    }
+    });
+    </script>
+  </div>
+
+
+
+
+  <!-- jQuery, Bootstrap, and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  
+  <!-- Google Map API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap" async defer></script>
+  
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/de617e3533.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
